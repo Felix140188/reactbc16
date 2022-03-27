@@ -8,6 +8,9 @@ import DataBinding from "./Databinding/DataBinding";
 import HandleEvent from "./HandleEvent/HandleEvent";
 import StateDemo from "./StateDemo/StateDemo";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
+import DemoProps from "./Props/DemoProp/DemoProps";
+import ProductList from "./Props/ShoesShop/ProductList";
+import DemoXemChiTiet from "./Props/DemoXemChiTiet/DemoXemChiTiet";
 //component App se la noi chua toan bo giao dien cua ung dung
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
       {/* <DataBinding /> */}
       {/* <HandleEvent /> */}
       {/* <StateDemo /> */}
-      <RenderWithMap />
+      {/* <RenderWithMap /> */}
+      {/* <DemoProps /> */}
+      {/* <ProductList /> */}
+      <DemoXemChiTiet />
     </div>
   );
 }
