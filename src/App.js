@@ -11,6 +11,7 @@ import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import DemoProps from "./Props/DemoProp/DemoProps";
 import ProductList from "./Props/ShoesShop/ProductList";
 import DemoXemChiTiet from "./Props/DemoXemChiTiet/DemoXemChiTiet";
+import BaiTapGioHang from "./DemoRedux/BaiTapGioHang/BaiTapGioHang";
 //component App se la noi chua toan bo giao dien cua ung dung
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       {/* <RenderWithMap /> */}
       {/* <DemoProps /> */}
       {/* <ProductList /> */}
-      <DemoXemChiTiet />
+      {/* <DemoXemChiTiet /> */}
+      <BaiTapGioHang/>
     </div>
   );
 }
