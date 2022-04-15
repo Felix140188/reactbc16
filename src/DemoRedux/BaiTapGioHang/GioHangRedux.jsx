@@ -27,13 +27,19 @@ class GioHangRedux extends Component {
               </td>
               <td>{spGH.giaBan.toLocaleString()}</td>
               <td>
-                <button className='btn btn-primary mr-2'>+</button>
+                <button className='btn btn-primary mr-2' onClick={() => {
+                  this.props.tangGiamSoLuong(spGH.maSP, 1)
+                }}>+</button>
                 {spGH.soLuong}
-                <button className='btn btn-primary ml-2'>-</button>
+                <button className='btn btn-primary ml-2' onClick={() => {
+                  this.props.tangGiamSoLuong(spGH.maSP, -1)
+                }}>-</button>
               </td>
               <td>{(spGH.giaBan * spGH.soLuong).toLocaleString()}</td>
               <td>
-                <button className='btn btn-danger'>Xoa</button>
+                <button className='btn btn-danger' onClick={() => {
+                  this.props.xoaGioHang(spGH.maSP);
+                }}>Xoa</button>
               </td>
             </tr>
           })}
@@ -53,5 +59,33 @@ const mapStateToProps = (rootReducer) => {
   }
 
 }
-//cu phap tao ra 1 component co lien ket redux
-export default connect(mapStateToProps)(GioHangRedux);
+
+//Viet ham mapdispatchtoProps dinh nghia ham gui du lieu len redux
+const mapdispatchtoProps = (dispatch) => {
+
+  return {
+    xoaGioHang: (maSPClick) => {
+      console.log('ma san pham click: ', maSPClick);
+      const action = {
+        type: 'XOA_GIO_HANG',
+        maSPClick
+      }
+      //dua du lieu len redux
+      dispatch(action);
+    },
+    tangGiamSoLuong: (maSPClick, soLuong) => {
+      console.log(maSPClick, soLuong);
+      //tao ra action gui len reducer
+      const action = {
+        type: 'TANG_GIAM_SO_LUONG',
+        maSPClick,
+        soLuong
+      }
+      //dung ham dispatch tu redux de dua du lieu len store
+      dispatch(action);
+    }
+  }
+}
+
+//cu phap tao ra 1 component co lien ket redux, mapdispatchtoProps luon la tham so thu 2
+export default connect(mapStateToProps, mapdispatchtoProps)(GioHangRedux);
