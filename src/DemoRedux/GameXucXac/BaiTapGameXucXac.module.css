@@ -1,0 +1,16 @@
+/*
+ Code css tach file thi cac link di theo duong dan tuong doi tu file trong src/assets/img
+ (khong di theo public nhu trong html)
+*/
+
+@font-face {
+    font-family: fontGame;
+    src: url(../../assets/fonts/Pony.ttf);
+}
+
+.game-xuc-xac {
+    background-image: url(../../assets/img/gameXucXac/bgGame.png);
+    width: 100vw;
+    height: 100vh;
+    font-family: fontGame;
+}

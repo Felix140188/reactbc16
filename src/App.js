@@ -12,6 +12,7 @@ import DemoProps from "./Props/DemoProp/DemoProps";
 import ProductList from "./Props/ShoesShop/ProductList";
 import DemoXemChiTiet from "./Props/DemoXemChiTiet/DemoXemChiTiet";
 import BaiTapGioHang from "./DemoRedux/BaiTapGioHang/BaiTapGioHang";
+import GameXucXac from "./DemoRedux/GameXucXac/GameXucXac";
 //component App se la noi chua toan bo giao dien cua ung dung
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* <DemoProps /> */}
       {/* <ProductList /> */}
       {/* <DemoXemChiTiet /> */}
-      <BaiTapGioHang/>
+      {/* <BaiTapGioHang/> */}
+      <GameXucXac />  
     </div>
   );
 }
